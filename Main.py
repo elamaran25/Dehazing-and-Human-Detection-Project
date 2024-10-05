@@ -9,7 +9,7 @@ def dehaze(frame):
     # Split the LAB image into channels
     l, a, b = cv2.split(lab)
     
-    # Apply CLAHE to the L-channel (lightness)
+    # Apply CLAHE to the L-channel [lightness]
     clahe = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(8,8))
     cl = clahe.apply(l)
     
